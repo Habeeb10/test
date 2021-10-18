@@ -7,15 +7,14 @@ import {Coolicon, Secure} from '../../../assets/svg';
 import {LoginStyles as styles} from './styles';
 import {Container} from '../../components/container';
 
-export default function Login({navigation}) {
+function Login({navigation}) {
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleStart = () => {
-    if (!email || !username) {
+  const handlogin = () => {
+    if (!email) {
       return Alert.alert('Warning', 'Email or Username is Required');
-    } else navigation.navigate('home');
+    } else navigation.navigate('messages');
   };
   return (
     <Container>
@@ -43,6 +42,7 @@ export default function Login({navigation}) {
               value={password}
               onchange={setPassword}
               icon={<Secure />}
+              style={styles.input}
             />
           </View>
         </View>
@@ -50,7 +50,7 @@ export default function Login({navigation}) {
           <Text style={styles.forgetpassword}>Forgot Password?</Text>
         </TouchableOpacity>
 
-        <Button title="Log In" style={styles.button} onPress={handleStart} />
+        <Button title="Log In" style={styles.button} onPress={handlogin} />
         <View style={styles.signupcontainer}>
           <TouchableOpacity>
             <Text style={styles.account}> Don’t have an account?</Text>
@@ -63,3 +63,5 @@ export default function Login({navigation}) {
     </Container>
   );
 }
+
+export default Login;
