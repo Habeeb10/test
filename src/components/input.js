@@ -6,6 +6,7 @@ import {hp, wp} from './utils';
 export const Input = ({placeholder, style, onchange, value, icon}) => {
   return (
     <View style={[styles.container, style]}>
+      <View style={{width: 30}}>{icon}</View>
       <TextInput
         style={styles.textInput}
         placeholder={placeholder}
@@ -13,7 +14,6 @@ export const Input = ({placeholder, style, onchange, value, icon}) => {
         onChangeText={onchange}
         value={value}
       />
-      <View style={{width: 30}}>{icon}</View>
     </View>
   );
 };
@@ -26,9 +26,6 @@ const styles = StyleSheet.create({
     height: hp(54),
     width: wp(325),
     left: 25,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
   },
   textInput: {
     fontSize: hp(13),
