@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {messagesStyles as styles} from './styles';
 
 export const Chat = ({icon, title, toppings, messages, time}) => {
@@ -7,7 +7,7 @@ export const Chat = ({icon, title, toppings, messages, time}) => {
     <View style={styles.base}>
       <View style={styles.left}>
         <Image resizeMode="contain" style={styles.image} source={icon} />
-        <View style={styles.chatcontainer}>
+        <TouchableOpacity style={styles.chatcontainer}>
           <View style={styles.top}>
             <Text style={styles.title}>{title}</Text>
             {messages && (
@@ -19,7 +19,7 @@ export const Chat = ({icon, title, toppings, messages, time}) => {
           <View>
             <Text style={styles.toppings}>{toppings}</Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
       <Text style={styles.time}>{time}</Text>
     </View>

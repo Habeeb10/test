@@ -23,7 +23,7 @@ export default function MyTabs() {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+        tabBarIcon: ({focused}) => {
           if (route.name === 'connect') {
             return <FriendIcon color={focused ? colors.red : colors.ash} />;
           } else if (route.name === 'profile') {

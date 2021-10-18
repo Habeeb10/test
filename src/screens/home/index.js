@@ -30,6 +30,8 @@ function Login({navigation}) {
             <Text style={styles.love}>find love here</Text>
           </View>
         </View>
+
+        <Text style={styles.login}>Log In</Text>
         <View style={styles.inputContainer}>
           <Input
             placeholder="Email or Username"

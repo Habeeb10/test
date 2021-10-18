@@ -1,7 +1,15 @@
 import {StyleSheet} from 'react-native';
 import {hp, wp} from '../../components/utils';
+import * as colors from '../../components/colors';
 
 export const LoginStyles = StyleSheet.create({
+  login: {
+    fontWeight: '800',
+    fontSize: hp(17),
+    color: colors.magenta,
+    alignSelf: 'center',
+    marginTop: hp(160),
+  },
   input: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -11,7 +19,7 @@ export const LoginStyles = StyleSheet.create({
     marginTop: hp(21),
   },
   inputContainer: {
-    marginTop: hp(200),
+    marginTop: hp(20),
   },
   button: {
     marginTop: hp(103),
@@ -52,10 +60,12 @@ export const LoginStyles = StyleSheet.create({
     fontWeight: '900',
     fontSize: hp(35),
     marginLeft: wp(105),
+    color: colors.ash,
   },
   love: {
     fontWeight: '400',
     fontSize: hp(17),
     marginLeft: wp(130),
+    fontStyle: 'italic',
   },
 });

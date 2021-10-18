@@ -3,17 +3,12 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import * as colors from './colors';
 import {hp, wp} from './utils';
 
-export const Input = ({placeholder, style, onchange, value, icon}) => {
+export const Searchinput = ({placeholder, icon, style}) => {
   return (
     <View style={[styles.container, style]}>
-      <TextInput
-        style={styles.textInput}
-        placeholder={placeholder}
-        placeholderTextColor={colors.deepgray}
-        onChangeText={onchange}
-        value={value}
-      />
-      <View style={{width: 30}}>{icon}</View>
+      <View>{icon}</View>
+
+      <TextInput style={styles.textInput} placeholder={placeholder} />
     </View>
   );
 };
@@ -25,10 +20,11 @@ const styles = StyleSheet.create({
     borderRadius: hp(17),
     height: hp(54),
     width: wp(325),
-    left: 25,
+    left: 30,
   },
   textInput: {
     fontSize: hp(13),
     color: colors.grey,
+    marginLeft: hp(13),
   },
 });

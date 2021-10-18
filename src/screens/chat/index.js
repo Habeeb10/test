@@ -3,10 +3,10 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {Container} from '../../components/container';
 import {Chat} from './chatCard';
 import * as Images from '../../../assets/image';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {messagesStyles as styles} from './styles';
 import {Icon, SearchIcon} from '../../../assets/svg';
-import {Input} from '../../components/input';
+import {Searchinput} from '../../components/searchInput';
 
 const LIST = [
   {
@@ -49,23 +49,25 @@ const LIST = [
   },
 ];
 
-function Messages() {
+function Messages({navigation}) {
   return (
     <Container>
       <KeyboardAwareScrollView>
         <View style={styles.overall}>
           <Text style={styles.chats}>Chats</Text>
-          <View style={styles.iconcontainer}>
+          <TouchableOpacity
+            style={styles.iconcontainer}
+            onPress={() => navigation.navigate('login')}>
             <Icon />
-          </View>
+          </TouchableOpacity>
         </View>
 
-        <Input
+        <Searchinput
           style={styles.input}
           icon={<SearchIcon />}
           placeholder="search"
         />
-
+        <Text style={styles.message}>Messages</Text>
         <View style={styles.container}>
           <View>
             {LIST.map((item, index) => {

@@ -3,8 +3,28 @@ import {hp, wp} from '../../components/utils';
 import * as colors from '../../components/colors';
 
 export const messagesStyles = StyleSheet.create({
-  time:{
-    
+  title: {
+    fontWeight: '700',
+    fontSize: hp(14),
+    color: colors.black,
+  },
+  toppings: {
+    fontSize: hp(12),
+    fontWeight: '400',
+    color: colors.magenta,
+  },
+  message: {
+    fontSize: hp(18),
+    fontWeight: '700',
+    color: colors.black,
+    marginTop: hp(42),
+    marginBottom: hp(16),
+    marginLeft: hp(26),
+  },
+  time: {
+    fontWeight: '700',
+    fontSize: hp(12),
+    color: colors.darkgrey,
   },
   input: {
     width: wp(321),
@@ -47,7 +67,7 @@ export const messagesStyles = StyleSheet.create({
   messages: {
     height: hp(14),
     width: wp(14),
-    borderRadius: hp(7),
+    borderRadius: hp(10),
     backgroundColor: colors.red,
     alignItems: 'center',
     justifyContent: 'center',
