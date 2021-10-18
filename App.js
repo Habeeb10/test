@@ -1,6 +1,8 @@
 import React from 'react';
-import Login from './src/screens/home';
+import Navigator from './src/navigator/mainNavigator';
 
-export default function App() {
-  return <Login />;
+function App() {
+  return <Navigator />;
 }
+
+export default App;
